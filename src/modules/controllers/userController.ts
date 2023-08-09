@@ -51,8 +51,8 @@ const updateUser = async (req: Request, res: Response) => {
     if (req.body.contactNo) {
       users!.contactNo = req.body.contactNo;
     }
-    if(req.file?.filename) {
-        users!.profile_img = req.file?.filename
+    if (req.file?.filename) {
+      users!.profile_img = req.file?.filename;
     }
 
     await users!.save();
